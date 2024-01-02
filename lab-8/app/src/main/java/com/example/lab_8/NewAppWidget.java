@@ -19,7 +19,7 @@ public class NewAppWidget extends AppWidgetProvider {
         Intent intent=new Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://google.com"));
         PendingIntent pending= PendingIntent.getActivity(context, 0,
-                intent, 0);
+                intent, Intent.FILL_IN_ACTION);
         RemoteViews views = new RemoteViews(context.getPackageName(),
                 R.layout.new_app_widget);
         views.setOnClickPendingIntent(R.id.appwidget_text, pending);
