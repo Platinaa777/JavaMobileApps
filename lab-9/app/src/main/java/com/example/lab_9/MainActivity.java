@@ -3,12 +3,9 @@ package com.example.lab_9;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,26 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-//    @Override
-//    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-//        getMenuInflater().inflate(R.menu.contextmenu, menu);
-//        super.onCreateContextMenu(menu, v, menuInfo);
-//    }
-//
-//    @Override
-//    public boolean onContextItemSelected(@NonNull MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.color_red){
-//            TextView textView = (TextView) findViewById(R.id.text1);
-//            textView.setTextColor(Color.parseColor("red"));
-//        }
-//        if (id == R.id.color_black){
-//            TextView textView = (TextView) findViewById(R.id.text1);
-//            textView.setTextColor(Color.parseColor("black"));
-//        }
-//        return super.onContextItemSelected(item);
-//    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
