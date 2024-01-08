@@ -10,8 +10,8 @@
     <TextView
         android:id="@+id/textView5"
         style="@style/AppTheme"
-        android:layout_width="238dp"
-        android:layout_height="280dp"
+        android:layout_width="292dp"
+        android:layout_height="332dp"
         android:gravity="center_horizontal"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,8 +22,8 @@
     <TextView
         android:id="@+id/textView4"
         style="@style/AppTheme"
-        android:layout_width="239dp"
-        android:layout_height="158dp"
+        android:layout_width="290dp"
+        android:layout_height="238dp"
         android:gravity="center_horizontal"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,18 +38,20 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/fio"
+        android:textColor="#E50F0F"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.943" />
 
     <TextView
         android:id="@+id/textView2"
         style="@style/AppTheme"
-        android:layout_width="229dp"
-        android:layout_height="125dp"
+        android:layout_width="289dp"
+        android:layout_height="214dp"
         android:gravity="center_horizontal"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,8 +63,8 @@
     <TextView
         android:id="@+id/textView3"
         style="@style/AppTheme"
-        android:layout_width="199dp"
-        android:layout_height="106dp"
+        android:layout_width="286dp"
+        android:layout_height="184dp"
         android:gravity="center_horizontal"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
