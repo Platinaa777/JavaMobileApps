@@ -1,42 +1,27 @@
 package com.example.lab_7;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.yandex.mapkit.Animation;
-import com.yandex.mapkit.MapKitFactory;
-import com.yandex.mapkit.geometry.Point;
-import com.yandex.mapkit.map.CameraPosition;
-import com.yandex.mapkit.mapview.MapView;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
-public class MainActivity extends AppCompatActivity {
-
-    private static MapView mapView;
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private GoogleMap map;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        MapKitFactory.setApiKey("a8991710-dfa7-4cc9-a50a-66fed1f16762");
-        MapKitFactory.initialize(this);
-        setContentView(R.layout.activity_main);
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        mapView = findViewById(R.id.map_view);
-        mapView.getMap().setRotateGesturesEnabled(false);
-        mapView.getMap().move(new CameraPosition(
-                new Point(52.256120, 104.253059), 14, 0, 0));
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.id_map);
+        mapFragment.getMapAsync(this);
     }
 
     @Override
-    protected void onStop() {
-        mapView.onStop();
-        MapKitFactory.getInstance().onStop();
-        super.onStop();
-    }
+    public void onMapReady(@NonNull GoogleMap googleMap) {
 
-    @Override
-    protected void onStart() {
-        mapView.onStart();
-        MapKitFactory.getInstance().onStart();
-        super.onStart();
     }
 }
