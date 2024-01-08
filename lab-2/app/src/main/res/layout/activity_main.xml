@@ -4,24 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#6C32FF">
 
     <TextView
         android:id="@+id/fio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="180dp"
         android:text="@string/fio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        />
 
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
         android:hint="@string/hint_editText"
         android:inputType="textPersonName"
         android:rotationX="2"
@@ -29,7 +34,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColorHint="#32D32C"
+        android:gravity="center"
+        android:textStyle="italic"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -37,6 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:text="TextView"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
         app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -47,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Button"
+        android:backgroundTint="#FFC20A"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
