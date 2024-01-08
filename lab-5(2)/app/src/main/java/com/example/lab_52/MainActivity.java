@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
     private void setData(){
-        images.add(new Image ("cat1", R.drawable.image1));
-        images.add(new Image ("cat2", R.drawable.image2));
-        images.add(new Image ("mycat", R.drawable.image3));
-        images.add(new Image ("nyancat", R.drawable.image4));
+        images.add(new Image ("dog1", R.drawable.image1));
+        images.add(new Image ("dog2", R.drawable.image2));
+        images.add(new Image ("dog3", R.drawable.image3));
+        images.add(new Image ("dog4", R.drawable.image4));
     }
 }
