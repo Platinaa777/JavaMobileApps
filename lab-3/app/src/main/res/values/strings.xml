@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">lab-3</string>
     <string name="fio">Мирошниченко Денис Александрович, гр. БПИ225</string>
+    <string name="inputs">Вы ввели:</string>
+    <string name="name_second_activity">second activity</string>
+    <string name="back">BACK</string>
+    <string name="name_input">Введите имя</string>
+    <string name="next_page">NEXT</string>
+    <string name="activity_1">Activity 1</string>
 </resources>
