@@ -10,21 +10,21 @@ import android.widget.RemoteViews;
 
 /**
  * Implementation of App Widget functionality.
+ * App Widget Configuration implemented in {@link NewAppWidgetConfigureActivity NewAppWidgetConfigureActivity}
  */
 public class NewAppWidget extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-        RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
-        Intent intent1 = new Intent(Intent.ACTION_VIEW);
-        intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent1.setData(Uri.parse("https://dzen.ru/"));
-
-        PendingIntent pIntent = PendingIntent.getActivity(context, 0, intent1, 0);
-        remoteViews.setOnClickPendingIntent(R.id.btn_open_site, pIntent);
-
-        appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
+        Intent intent=new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://google.com"));
+        PendingIntent pending= PendingIntent.getActivity(context, 0,
+                intent, 0);
+        RemoteViews views = new RemoteViews(context.getPackageName(),
+                R.layout.new_app_widget);
+        views.setOnClickPendingIntent(R.id.appwidget_text, pending);
+        appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
     @Override
@@ -33,5 +33,15 @@ public class NewAppWidget extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId);
         }
+    }
+
+    @Override
+    public void onEnabled(Context context) {
+        // Enter relevant functionality for when the first widget is created
+    }
+
+    @Override
+    public void onDisabled(Context context) {
+        // Enter relevant functionality for when the last widget is disabled
     }
 }
