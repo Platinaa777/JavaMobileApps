@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                             .setChannelId("mychannel1")
                             .setSmallIcon(android.R.drawable.ic_dialog_alert)
                             .setOngoing(true)
+                            .setSound(Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
+                                    +"://"+getPackageName()+"/"+R.raw.notify))
                             .build();
                 }
                 else
@@ -75,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
                             .setTicker("Новое сообщение")
                             .setSmallIcon(android.R.drawable.ic_dialog_alert)
 
-                            .setSound(Uri.parse("android.resource://"+getPackageName()+"/"+
-                                    R.raw.notify))
+                            .setSound(Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
+                                    +"://"+getPackageName()+"/"+R.raw.notify))
                             .build();
                     notificationManager = (NotificationManager)
                             getSystemService(Context.NOTIFICATION_SERVICE);
